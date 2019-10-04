@@ -17,13 +17,13 @@ export default class Players extends React.Component {
             console.log('players', this.state.players)
         })
         .catch(err => {
-            console.log('the data was not fetched', err)
+            console.log('Unable to fetch data!', err)
         })
     }
     
     render() {
         return (
-            <div data-testid="player-container">
+            <div data-testid="player-card">
                 {this.state.players.map(item => 
                     <PlayerCard player={item} />
                 )}

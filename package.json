@@ -15,6 +15,7 @@
     "react-strap": "^0.0.1"
   },
   "devDependencies": {
+    "@testing-library/react": "^9.3.0",
     "nodemon": "^1.17.2"
   },
   "scripts": {
