@@ -1,51 +1,26 @@
 import React from 'react';
-import axios from 'axios';
-import "./App.css"
+import './App.css';
+import Players from './components/Players'
+import useDarkMode from './hooks/useDarkMode'
 
-class App extends React.Component{
-  state = {
-    player: []
-  }
-
-  componentDidMount = () => {
-    this.playerData();
-  }
-
-  // Axios call to get player data
-  playerData = () => {
-    axios
-    .get('http://localhost:5000/api/players')
-    .then(response =>{
-      console.log("response", response.data)
-      this.setState({
-        player: response.data
-      })
-    })
-
-    .catch(error => {
-      console.log("Unable to fetch data", error)
-    })
-  }
-
-
-  // render fetched player data in a card
-  render(){
-    return (
-      <div className="App">
-        <h2>Google Women's World Cup Players</h2>
-        <div className="player-card">
-          {this.state.player.map(players => (
-            <div className="player-list">
-            <div className="player-cards" key={players.id}>
-              <p>Player Name: {players.name}</p>
-              <p>Country: {players.country}</p>
-              <p>Searches: {players.searches}</p>
-            </div>
-            </div>
-          ))}
-        </div>
+function App() {
+  const [darkMode, setDarkMode] = useDarkMode();
+  const toggleMode = e => {
+    e.preventDefault();
+    setDarkMode(!darkMode);
+  };
+  return (
+    <div className="App">
+      <div className="dark-mode__toggle">
+        <div
+          onClick={toggleMode}
+          className={darkMode ? 'toggle toggled' : 'toggle'}
+        />
+        <h3>Toggle Dark</h3>
       </div>
-    )
-  }
-};
+     <Players />
+    </div>
+  );
+}
+
 export default App;

@@ -9,6 +9,8 @@
     "bootstrap": "^4.3.1",
     "cors": "^2.8.3",
     "express": "^4.15.2",
+    "less": "^3.10.3",
+    "less-watch-compiler": "^1.14.1",
     "react-dom": "^16.10.2",
     "react-strap": "^0.0.1"
   },
