@@ -31,3 +31,28 @@
     transform: rotate(360deg);
   }
 }
+
+.player-list{
+  display:flex;
+  flex-wrap:wrap;
+  margin: 0 auto;
+  justify-content:center;
+}
+
+.player-cards{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width: 25%;
+  min-width: 500px;
+  min-height: 250px;
+  color: #f3f3f3;
+  background-color: #282c34;
+  font-family: 'Bree Serif', serif;
+  font-size: 1.5rem;
+  border: 2px solid #f3f3f3;
+  border-radius: 25px;
+  margin: 1%;
+  padding: 0.5%;
+}
