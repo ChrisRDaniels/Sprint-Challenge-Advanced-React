@@ -18,6 +18,7 @@ function App() {
         />
         <h3>Toggle Dark Mode</h3>
       </div>
+      <h1>Women's World Cup Players</h1>
      <Players />
     </div>
   );
