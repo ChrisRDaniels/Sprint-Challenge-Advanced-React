@@ -19,6 +19,7 @@ function App() {
         <h3>Toggle Dark Mode</h3>
       </div>
       <h1>Women's World Cup Players</h1>
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/2019_FIFA_Women%27s_World_Cup.svg/1200px-2019_FIFA_Women%27s_World_Cup.svg.png" height="250px"   alt= "world-cup-img"></img>
      <Players />
     </div>
   );
